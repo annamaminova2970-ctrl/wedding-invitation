@@ -1,0 +1,551 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden; 
+}
+
+.envelope-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Сама карточка */
+.envelope-container {
+    background-color: #FAF7F2; 
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+    border-radius: 2px;
+    cursor: pointer; 
+    transition: all 0.4s ease;
+}
+
+.envelope-container:hover {
+    transform: translateY(-5px); /* Карточка чуть всплывает при наведении */
+    box-shadow: 0 30px 50px rgba(0,0,0,0.15); 
+}
+
+/* Верхний текст */
+.top-text {
+    margin-bottom: 20px;
+}
+
+.invite-title {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #4A3C31;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.invite-subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #4A3C31;
+    text-transform: lowercase;
+}
+
+/* Имена рукописным шрифтом */
+.names-script {
+    font-family: 'Marck Script', cursive;
+    font-size: 64px;
+    font-weight: 400;
+    color: #4A3C31;
+    line-height: 0.9;
+    margin-bottom: 30px;
+}
+
+.amp {
+    font-size: 40px;
+    display: inline-block;
+    margin: 5px 0;
+    color: #C7AE97; /* Бежевый цвет для амперсанда */
+}
+
+/* Конверт */
+.envelope-img {
+    width: 90%;
+    margin: 0 auto 30px auto;
+    display: block;
+}
+
+/* Текст внизу */
+.click-text {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #888;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.main-content {
+    display: none; 
+    background-color: #FAF7F2;
+    height: 100vh;
+    padding: 50px;
+    text-align: center;
+}
+/* --- Стили для основного экрана (после конверта) --- */
+.main-content {
+    display: none; 
+    background-color: #FAF7F2; /* Наш светлый бежевый фон */
+    min-height: 100vh;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.photo-block {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Рамка полароида */
+.polaroid {
+    background-color: #fff;
+    padding: 15px 15px 25px 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: rotate(-2deg); /* Легкий наклон для эффекта небрежности */
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    border-radius: 2px;
+}
+
+.polaroid img {
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+}
+
+.polaroid-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.script-text {
+    font-family: 'Marck Script', cursive;
+    font-size: 32px;
+    color: #4A3C31;
+    margin-bottom: 5px;
+}
+
+.date-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+/* Блок с именами */
+.names-block {
+    margin-top: 30px;
+}
+
+.wedding-day {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #4A3C31;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+/* Линия с точкой по центру */
+.separator-line {
+    width: 80%;
+    height: 1px;
+    background-color: #C7AE97;
+    margin: 0 auto;
+    position: relative;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #C7AE97;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Музыкальный плеер */
+.music-player {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.play-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #C7AE97;
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(199, 174, 151, 0.4);
+    transition: transform 0.2s ease;
+    margin-bottom: 15px;
+}
+
+.play-btn:hover {
+    transform: scale(1.05);
+}
+
+.music-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #888;
+    text-transform: lowercase;
+}
+/* --- Стили для блока приглашения и календаря --- */
+.invitation-block {
+    max-width: 500px;
+    margin: 60px auto 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Заголовок с большой буквы */
+.greeting-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #4A3C31;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-cap {
+    font-family: 'Marck Script', cursive;
+    font-size: 70px;
+    line-height: 0.5;
+    margin-right: -5px;
+    margin-top: 15px;
+    color: #4A3C31;
+}
+
+.greeting-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4A3C31;
+    margin-bottom: 60px;
+}
+
+/* Календарь */
+.calendar-section {
+    margin-top: 40px;
+}
+
+.month-script {
+    font-family: 'Marck Script', cursive;
+    font-size: 50px;
+    font-weight: 400;
+    color: #4A3C31;
+    margin-bottom: 20px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px 5px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: #4A3C31;
+}
+
+.day-name {
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+/* Наша выделенная дата с сердечком */
+.highlight-date {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.highlight-date span {
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    color: #4A3C31;
+}
+
+.heart-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    z-index: 1;
+    opacity: 0.8;
+}
+/* --- Стили для блока Локации (без карты) --- */
+.location-block {
+    max-width: 500px;
+    margin: 80px auto 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.location-address {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #4A3C31;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.location-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4A3C31;
+    margin-bottom: 40px;
+}
+
+/* Галерея фото */
+.memory-gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.memory-photo {
+    width: 48%;
+    background: #fff;
+    padding: 8px 8px 15px 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 2px;
+}
+
+.memory-photo img {
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+    filter: sepia(20%) contrast(90%);
+}
+
+/* Красиво наклоняем фото */
+.memory-photo:nth-child(1) {
+    transform: rotate(-3deg); 
+}
+
+.memory-photo:nth-child(2) {
+    transform: rotate(3deg); 
+    margin-top: 15px; 
+}
+
+/* Кнопка маршрута */
+.map-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #C7AE97;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.map-btn:hover {
+    background-color: #b0977f;
+}
+/* --- Стили для блока с фотографиями гостей --- */
+.photo-share-block {
+    max-width: 500px;
+    margin: 80px auto 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+/* --- Стили для анкеты --- */
+.rsvp-block {
+    max-width: 500px;
+    margin: 80px auto 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.rsvp-form {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.form-question {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: #4A3C31;
+    margin-bottom: 20px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    color: #4A3C31;
+}
+
+.radio-group input[type="radio"] {
+    accent-color: #C7AE97;
+    width: 20px;
+    height: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #C7AE97;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    color: #4A3C31;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4A3C31;
+}
+/* --- Стили для финального блока с таймером --- */
+.final-block {
+    max-width: 500px;
+    margin: 80px auto 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.timer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #4A3C31;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Тонкие разделительные линии */
+.time-box:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background-color: #C7AE97;
+}
+
+.time-box span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: #4A3C31;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.time-box p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: #888;
+    text-transform: lowercase;
+}
+
+/* Финальное фото */
+.final-photo-container {
+    width: 100%;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.final-photo-container img {
+    width: 100%;
+    display: block;
+    filter: sepia(15%) contrast(95%); /* Легкий винтажный эффект */
+}
+
+.final-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #4A3C31;
+    text-transform: uppercase;
+}

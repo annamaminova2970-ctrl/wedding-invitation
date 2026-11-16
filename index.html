@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свадебное приглашение</title>
+    
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Подключаем красивые шрифты (рукописный и классический) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400&family=Marck+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- ЭКРАН 1: ОБЛОЖКА С КОНВЕРТОМ -->
+    <!-- ========================================== -->
+    <div class="envelope-screen" id="envelope-screen">
+        <div class="envelope-container">
+            
+            <div class="top-text">
+                <p class="invite-title">ПРИГЛАШЕНИЕ</p>
+                <p class="invite-subtitle">на свадьбу</p>
+            </div>
+
+            <!-- Рукописные имена -->
+            <h1 class="names-script">Григорий
+<span class="amp">&</span>
+Юлия</h1>
+            
+            <!-- Конверт -->
+            <img src="envelope.png" alt="Конверт" class="envelope-img">
+            
+            <p class="click-text">НАЖМИ
+чтобы открыть</p>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- ЭКРАН 2: ОСНОВНОЙ САЙТ -->
+    <!-- ========================================== -->
+    <div class="main-content" id="main-content">
+        
+        <div class="photo-block">
+            
+            <!-- Сама фотография в рамке полароид -->
+            <div class="polaroid">
+                <img src="photo.jpg" alt="Наше фото">
+                <div class="polaroid-text">
+                    <span class="script-text">Мы женимся!</span>
+                    <span class="date-text">17.07.2027</span>
+                </div>
+            </div>
+
+            <div class="names-block">
+                <p class="wedding-day">wedding day</p>
+                <h2 class="main-names">Григорий и Юлия</h2>
+                
+                <!-- Линия с точкой -->
+                <div class="separator-line">
+                    <div class="dot"></div>
+                </div>
+            </div>
+
+            <!-- Музыкальный плеер (пока только красивый вид) -->
+            <div class="music-player">
+                <button class="play-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <p class="music-text">включите музыку</p>
+            </div>
+<!-- Блок с приглашением и календарем -->
+            <div class="invitation-block">
+                <h2 class="greeting-title">
+                    <span class="drop-cap">Д</span>ОРОГИЕ ГОСТИ!
+                </h2>
+                <p class="greeting-text">
+                    Один день в этом году станет для нас особенным, и мы хотим провести его в кругу близких и друзей! С большим удовольствием приглашаем Вас на нашу свадьбу!
+                </p>
+
+                <div class="calendar-section">
+                    <h3 class="month-script">Июль</h3>
+                    
+                    <div class="calendar-grid">
+                        <div class="day-name">ПН</div>
+                        <div class="day-name">ВТ</div>
+                        <div class="day-name">СР</div>
+                        <div class="day-name">ЧТ</div>
+                        <div class="day-name">ПТ</div>
+                        <div class="day-name">СБ</div>
+                        <div class="day-name">ВС</div>
+                        
+                        <!-- Пустые ячейки в начале (Июль 2027 начинается с четверга) -->
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                        <div>11</div>
+                        
+                        <div>12</div>
+                        <div>13</div>
+                        <div>14</div>
+                        <div>15</div>
+                        <div>16</div>
+                        <!-- Наше 17 июля с сердечком -->
+                        <div class="highlight-date">
+                            <svg class="heart-svg" viewBox="0 0 24 24" fill="none" stroke="#8B6B4A" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                            <span>17</span>
+                        </div>
+                        <div>18</div>
+                        
+                        <div>19</div>
+                        <div>20</div>
+                        <div>21</div>
+                        <div>22</div>
+                        <div>23</div>
+                        <div>24</div>
+                        <div>25</div>
+                        
+                        <div>26</div>
+                        <div>27</div>
+                        <div>28</div>
+                        <div>29</div>
+                        <div>30</div>
+                        <div>31</div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+<!-- Блок с локацией -->
+            <div class="location-block">
+                <h2 class="greeting-title">
+                    <span class="drop-cap">Л</span>ОКАЦИЯ
+                </h2>
+                
+                <div class="location-address">
+                    <p>деревня Велино,</p>
+                    <p>дом 125</p>
+                </div>
+
+                <p class="location-text">
+                    Это место наполнено множеством теплых и положительных воспоминаний. Здесь прошло детство невесты, и мы будем счастливы разделить этот уют и радость с самыми близкими гостями.
+                </p>
+
+                <!-- Фотографии -->
+                <div class="memory-gallery">
+                    <div class="memory-photo">
+                        <img src="memory1.jpg" alt="Воспоминание 1">
+                    </div>
+                    <div class="memory-photo">
+                        <img src="memory2.jpg" alt="Воспоминание 2">
+                    </div>
+                </div>
+
+                <!-- Кнопка маршрута (вместо карты) -->
+                <a href="https://yandex.ru/maps/?text=деревня%20Велино,%20125" target="_blank" class="map-btn">
+                    Построить маршрут
+                </a>
+            </div>
+<!-- Блок с фотографиями гостей -->
+            <div class="photo-share-block">
+                <h2 class="greeting-title">
+                    <span class="drop-cap">Ф</span>ОТОГРАФИИ
+                </h2>
+                <p class="location-text">
+                    Мы будем счастливы, если вы поделитесь с нами своими снимками с нашего праздника. 
+                    Нажмите на кнопку ниже, чтобы загрузить фото в наш общий альбом.
+                </p>
+                <a href="ССЫЛКА_НА_ВАШУ_ПАПКУ_ЯНДЕКС_ДИСКА" target="_blank" class="map-btn">
+                    Загрузить фотографии
+                </a>
+            </div>
+<!-- Блок анкеты гостя -->
+            <div class="rsvp-block">
+                <h2 class="greeting-title">
+                    <span class="drop-cap">А</span>НКЕТА ГОСТЯ
+                </h2>
+                <p class="location-text">
+                    Пожалуйста, подтвердите свое присутствие, чтобы мы могли спланировать наше торжество наилучшим образом.
+                </p>
+                
+                <!-- ВАЖНО: Замените email на свой! -->
+                <form action="https://formsubmit.co/maminovayv@mail.ru" method="POST" class="rsvp-form">
+                    <p class="form-question">Сможете ли Вы присутствовать на торжестве?</p>
+                    
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="attendance" value="Да" required>
+                            <span>Да</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="attendance" value="Нет" required>
+                            <span>Нет</span>
+                        </label>
+                    </div>
+
+                    <input type="text" name="name" placeholder="Ваше имя/имена" required class="form-input">
+                    
+                    <!-- Настройки письма -->
+                    <input type="hidden" name="_subject" value="Новый ответ на свадебное приглашение!">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <button type="submit" class="map-btn">Отправить</button>
+                </form>
+            </div>
+<!-- Блок таймера и финального фото -->
+            <div class="final-block">
+                <h2 class="timer-title">ДО СВАДЬБЫ ОСТАЛОСЬ</h2>
+                
+                <!-- Таймер -->
+                <div class="countdown" id="countdown">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <p>дней</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <p>часов</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <p>минут</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <p>секунд</p>
+                    </div>
+                </div>
+
+                <!-- Финальное фото -->
+                <div class="final-photo-container">
+                    <img src="final-photo.jpg" alt="До встречи!">
+                </div>
+
+                <h2 class="final-text">ДО ВСТРЕЧИ!</h2>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Подключаем скрипт для открытия конверта -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
